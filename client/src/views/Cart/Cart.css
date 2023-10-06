@@ -38,30 +38,3 @@
     color: #0070ba;
     font-weight: bold;
 }
-
-
-
-/* Estilos para el componente de carrito vacío */
-.carrito-vacio {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 20px auto;
-    max-width: 100 vh;
-    max-width: 100 vw;
-   
-  }
-  
-  .carrito-vacio p {
-    font-size: 18px;
-    color: #333;
-    margin: 0;
-    padding: 10px;
-  }
-  
-  /* Puedes ajustar estos estilos según tus preferencias de diseño */
-  

@@ -3,19 +3,11 @@ import style from "./card.module.css";
 import { useContext, useEffect } from "react";
 import { CartContext } from "../../contexts/ShoppingCartContext";
 
-const Card = ({
-  id,
-  image,
-  name,
-  price,
-  brand,
-  category,
-  description,
-  active,
-  stock,
-}) => {
-  const [cart, setCart] = useContext(CartContext);
 
+const Card = ({ id, image, name, price, brand, category, description, active, stock }) => {
+
+  const [cart, setCart] = useContext(CartContext);
+  
   const addToCart = (product) => {
     setCart((currItems) => {
       const isItemsFound = currItems.find((item) => item.id === id);
@@ -28,21 +20,7 @@ const Card = ({
           }
         });
       } else {
-        return [
-          ...currItems,
-          {
-            id,
-            quantity: 1,
-            price,
-            name,
-            image,
-            brand,
-            category,
-            description,
-            active,
-            stock,
-          },
-        ];
+        return [...currItems, { id, quantity: 1, price, name, image, brand, category, description, active, stock }];
       }
     });
   };
@@ -54,18 +32,7 @@ const Card = ({
       } else {
         return currItems.map((item) => {
           if (item.id === id) {
-            return {
-              ...item,
-              quantity: item.quantity - 1,
-              name,
-              price,
-              image,
-              brand,
-              category,
-              description,
-              active,
-              stock,
-            };
+            return { ...item, quantity: item.quantity - 1, name, price, image, brand, category, description, active, stock };
           } else {
             return item;
           }
@@ -75,23 +42,13 @@ const Card = ({
   };
 
   return (
-    <div
-      className={`card ${style.customCard} mx-auto`}
-      style={{ width: "18rem" }}
-    >
+    <div className={`card ${style.customCard} mx-auto`} style={{ width: "18rem" }}>
       <i className={`bi bi-balloon-heart ${style.heart}`}></i>
-      <img
-        src={image}
-        className={`card-img-top ${style.cardImage}`}
-        alt={name}
-      />
+      <img src={image} className={`card-img-top ${style.cardImage}`} alt={name} />
       <div className={`card-body ${style.customCardBody}`}>
         <div className={`text-center mb-3 ${style.nameAndPrice}`}>
           <h5 className={`card-title ${style.customCardTitle}`}>{name}</h5>
-          <p className={`card-text ${style.customCardText}`}>
-            {" "}
-            <strong> Precio: $ {price}</strong>
-          </p>
+          <p className={`card-text ${style.customCardText}`}> <strong> Precio: $ {price}</strong></p>
         </div>
         <div className={`text-center ${style.centeredButton}`}>
           <Link to={`/detail/${id}`}>
@@ -104,11 +61,13 @@ const Card = ({
           Agregar al Carrito
         </button>
         <button onClick={() => removeItem(id)} className={style["btn"]}>
-          Remover del Carrito
-        </button>
+        Remover del Carrito
+      </button>
       </div>
     </div>
   );
 };
 
 export default Card;
+
+
