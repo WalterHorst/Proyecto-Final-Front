@@ -1,0 +1,55 @@
+.cardDetail {
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px double #6489D8 !important;
+    box-shadow: 0 4px 8px rgba(0.4, 0.4, 0.4, 0.4);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+.product-name {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2315a1;
+}
+
+.product-brand {
+  font-size: 24px;
+  color: #666;
+}
+
+.product-category {
+  font-size: 20px;
+  color: #888;
+}
+
+.product-description {
+  font-size: 18px;
+  color: #777;
+}
+
+.product-price {
+  font-size: 28px;
+  color: #2315a1;
+}
+
+.btn {
+  background-color: #6489D8 !important;
+  color: white !important;
+  margin: 10px !important;
+}
+
+.ml-2 {
+ font-family: 'Times New Roman', Times, serif;
+ width: 50px;
+ border-radius: 0.8px;
+ text-align: center;
+ border: 2px groove #6489D8 ;
+ border-radius: 5px;
+ padding: 3.5px; 
+ width: 50px;
+}

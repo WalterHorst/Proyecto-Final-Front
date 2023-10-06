@@ -1,0 +1,42 @@
+.containerPrivacy::before {
+    content: ""; /* Agrega contenido al pseudo-elemento (en este caso, la imagen de fondo) */
+    background-image: url(../../assets/logo/Logo.png);
+    background-repeat: no-repeat;
+    background-size: contain; /* Ajusta la imagen para que se ajuste completamente en el contenedor sin distorsionarla */
+    opacity: 0.5; /* Ajusta la opacidad según lo que desees */
+    position: absolute; /* Establece la posición absoluta para el pseudo-elemento */
+    top: 20%; /* Ajusta la posición superior a 0 */
+    left: 25%; /* Ajusta la posición izquierda a 0 */
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: 100%; /* Ajusta la altura al 100% del contenedor */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido principal */
+  }
+  
+  .containerPrivacy  {
+    color: #000; /* Color de texto */
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 50px; /* Espaciado alrededor del contenido */
+    /* Otros estilos según tus necesidades */
+  }
+
+  @media screen and (max-width: 1300px) {
+    .containerPrivacy::before {
+      /* En pantallas más pequeñas, ajusta el tamaño y la posición de la imagen de fondo para centrarla */
+      background-size:contain; /* Utiliza el tamaño original de la imagen */
+      top: 60%; /* Ajusta la posición superior al 50% del contenedor */
+      left: 67%; /* Ajusta la posición izquierda al 50% del contenedor */
+      transform: translate(-50%, -50%); /* Centra la imagen de fondo */
+    }
+  
+   }
+  
+  @media screen and (max-width: 767px) {
+    .containerPrivacy::before {
+      /* En pantallas más pequeñas, ajusta el tamaño y la posición de la imagen de fondo para centrarla */
+      background-size:contain; /* Utiliza el tamaño original de la imagen */
+      top: 80%; /* Ajusta la posición superior al 50% del contenedor */
+      left: 50%; /* Ajusta la posición izquierda al 50% del contenedor */
+      transform: translate(-50%, -50%); /* Centra la imagen de fondo */
+    }
+  
+   }

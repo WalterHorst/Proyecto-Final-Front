@@ -1,0 +1,49 @@
+.customCard {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+  box-shadow: 0px 4px 8px rgba(0.5, 0.5, 0.5, 0.5) !important; 
+}
+
+.customCardBody {
+  text-align: center;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.customCardTitle {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 25px;
+}
+
+.customCardText {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 24px;
+  color: black;
+}
+
+.cardImage {
+  width: 100%;
+  height: 190% !important; 
+  object-fit: cover;
+}
+
+.centeredButton {
+  text-align: center;
+}
+
+.cardButton {
+  background-color: #E5F2FB !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  width: 50%;
+  border-radius: 1rem;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  cursor: pointer;
+}
+
+.heart {
+  text-align: center;
+}

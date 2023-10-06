@@ -1,0 +1,67 @@
+/* Estilos para el contenedor principal */
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para cada artículo en el carrito */
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.producto-imagen {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.producto-detalle {
+    flex-grow: 1;
+}
+
+.producto-nombre {
+    font-size: 18px;
+    margin: 0;
+}
+
+.producto-precio {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #0070ba;
+    font-weight: bold;
+}
+
+
+
+/* Estilos para el componente de carrito vacío */
+.carrito-vacio {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 100 vh;
+    max-width: 100 vw;
+   
+  }
+  
+  .carrito-vacio p {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  /* Puedes ajustar estos estilos según tus preferencias de diseño */
+  

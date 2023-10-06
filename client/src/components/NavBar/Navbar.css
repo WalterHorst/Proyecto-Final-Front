@@ -1,0 +1,104 @@
+.navbar {
+    padding: 0 150px;
+    background-color: #E5F2FB !important;
+    height: 80px;
+  }
+  .nav-item {
+    margin-left: 30px;
+  }
+  
+  .navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-nav .nav-item .nav-link:first-child {
+    flex: 0 0 auto; /* Evita que el primer div crezca o se contraiga */
+    width: auto; /* Permite que el ancho del primer div se ajuste automáticamente */
+    }
+
+  .nav-item .nav-link:hover {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #6489D8;
+  }
+  
+  .nav_logo {
+    width: 90px; /* Ajusta el tamaño del logo según tus necesidades */
+    transition: transform 0.8s; /* Agrega una transición suave */
+  }
+
+  .center-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-icon {
+    color: white;
+  }
+
+/* Buttons */
+  .d-flex .btn {
+    background-color: #6489D8;
+    color: white;
+    border: none;
+    margin-left: 10px;
+  }
+  
+  .d-flex .btn:hover {
+    transition: background-color 0.3s ease;
+    background-color: white !important;
+    color: black !important;
+    border: 2px solid #6489D8;
+  }
+  
+  .custom-icon:hover {
+    color: black; 
+  }
+  .nav_logo:hover {
+    transform: rotate(360deg); 
+  }
+
+
+/* Estilos para pantallas más pequeñas (768px o menos) */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto !important; /* Cambia la altura a auto para que se ajuste al contenido */
+    flex-direction: column; /* Cambia la dirección del flex container a columna */
+    align-items: center !important; /* Alinea los elementos al inicio del contenedor */
+  }
+
+  .navbar-toggler {
+    display: block !important; 
+  }
+
+  .navbar-collapse {
+    display:block; 
+    text-align: center;
+  }
+
+  .navbar-brand {
+    margin-right: 0 auto;
+  }
+
+  .navbar-nav {
+    margin-top: 1rem; /* Espacio superior entre el logo y el menú */
+    display: flex !important; /* Para centrar los botones horizontalmente */
+    flex-direction: column !important; /* Alinea los botones en una columna */
+    align-items: center !important; /* Alinea los botones al centro horizontalmente */
+  }
+
+  .nav-item {
+    margin-bottom: 0.2rem; 
+  }
+
+  .nav_logo {
+    width: 120px;
+    transition: transform 0.8s; 
+  }
+
+  .btn button{
+    margin: 0.2rem 0; /* Espaciado vertical entre los botones */
+    align-items: center !important; 
+  }
+ }

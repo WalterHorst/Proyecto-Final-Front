@@ -1,0 +1,72 @@
+.footer {
+  flex-shrink: 0;
+  background-color: #E5F2FB;
+}
+.titulo {
+font-size: 18px;
+font-weight: bold;
+margin: 10px 0;
+}
+  .footerTexto {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .iconosRedesSociales a{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 30%;
+  transition: all 0.2s ease-in;
+  }
+  
+  .iconosRedesSociales i {
+    color:black;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+    padding: 8px 19px;
+  }
+  
+  .iconosRedesSociales a:hover {
+    background-color: #6489D8;
+    border: 2px solid black;
+  }
+  
+  .iconosRedesSociales a:hover i {
+    color: white;
+  }
+
+  .link a {
+    cursor: pointer;
+    color: black !important; /* Usamos !important para dar prioridad */
+  }
+
+  .horario {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .info {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .ubicacion {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
+  }
