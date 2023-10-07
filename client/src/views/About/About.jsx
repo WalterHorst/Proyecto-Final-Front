@@ -37,12 +37,12 @@ const About = () => {
           </h5>
         </div>
 
-        <div className="row">
+        <div className={`row align-items-center ${style.row}`}>
           {/* Integrante1 */}
           <div className="col-12 col-md-6 col-lg-3">
             <div className={`proyecto ${style.proyecto}`}>
               <img
-                className={`object-cover w-100 shadow-md ${style.image}`}
+                    className={`object-cover w-100 shadow-md ${style.image} ${style.smallImage}`} 
                 style={{ objectFit: "cover" }}
                 src={imageFran}
                 alt="Franco"
@@ -76,7 +76,7 @@ const About = () => {
           <div className="col-12 col-md-6 col-lg-3">
             <div className={`proyecto ${style.proyecto}`}>
               <img
-                className={`object-cover w-100 shadow-md ${style.image}`}
+                className={`object-cover w-100 shadow-md ${style.image} ${style.smallImage}`}
                 style={{ objectFit: "cover" }}
                 src={imageIñaki}
                 alt="Iñaki"
@@ -106,7 +106,7 @@ const About = () => {
           <div className="col-12 col-md-6 col-lg-3">
             <div className={`proyecto ${style.proyecto}`}>
               <img
-                className={`object-cover w-100 shadow-md ${style.image}`}
+                className={`object-cover w-100 shadow-md ${style.image} ${style.smallImage}`}
                 style={{ objectFit: "cover" }}
                 src={imageFlor}
                 alt="Flor"
@@ -115,7 +115,7 @@ const About = () => {
                 <p className={style.centeredParagraph}>Florencia</p>
                 <div className="iconos-contenedor">
                   <a
-                    href="https://github.com/"
+                    href="https://github.com/FlorenciaHuespe"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -136,7 +136,7 @@ const About = () => {
           <div className="col-12 col-md-6 col-lg-3">
             <div className={`proyecto ${style.proyecto}`}>
               <img
-                className={`object-cover w-100 shadow-md ${style.image}`}
+                className={`object-cover w-100 shadow-md ${style.image} ${style.smallImage}`}
                 style={{ objectFit: "cover" }}
                 src={imageLucas}
                 alt="Lucas"
@@ -166,7 +166,7 @@ const About = () => {
           <div className="col-12 col-md-6 col-lg-3">
             <div className={`proyecto ${style.proyecto}`}>
               <img
-                className={`object-cover w-100 shadow-md ${style.image}`}
+                className={`object-cover w-100 shadow-md ${style.image} ${style.smallImage}`}
                 style={{ objectFit: "cover" }}
                 src={imageAndres}
                 alt="Andres"
@@ -196,7 +196,7 @@ const About = () => {
           <div className="col-12 col-md-6 col-lg-3">
             <div className={`proyecto ${style.proyecto}`}>
               <img
-                className={`object-cover w-100 shadow-md ${style.image}`}
+                className={`object-cover w-100 shadow-md ${style.image} ${style.smallImage}`}
                 style={{ objectFit: "cover" }}
                 src={imageWalter}
                 alt="Walter"
@@ -226,7 +226,7 @@ const About = () => {
           <div className="col-12 col-md-6 col-lg-3">
             <div className={`proyecto ${style.proyecto}`}>
               <img
-                className={`object-cover w-100 shadow-md ${style.image}`}
+                className={`object-cover w-100 shadow-md ${style.image} ${style.smallImage}`}
                 src={imageMeli}
                 alt="Meli"
               />
@@ -255,7 +255,7 @@ const About = () => {
           <div className="col-12 col-md-6 col-lg-3">
             <div className={`proyecto ${style.proyecto}`}>
               <img
-                className={`object-cover w-100 shadow-md ${style.image}`}
+                className={`object-cover w-100 shadow-md ${style.image} ${style.smallImage}`}
                 src={imageRodri}
                 alt="Rodri"
               />

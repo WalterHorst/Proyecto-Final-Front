@@ -11,10 +11,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { ShoppingCartProvider } from './contexts/ShoppingCartContext.jsx';
 
-//259956748847-ojsnsm1ago1oh63qu0i5sdnfvc3t2n4c.apps.googleusercontent.com
-//537898112072-ld99b41tpnpsb9k6lchj9h0krm3hi4bg.apps.googleusercontent.com
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <GoogleOAuthProvider clientId="259956748847-llkt4652t3jgf9veeh42u5q1u9c0kpor.apps.googleusercontent.com">
+  <GoogleOAuthProvider clientId="74929370675-3o1v81d9asdbfn0sdok5oq41p7orjdvj.apps.googleusercontent.com">
     <Provider store={store}>
       <BrowserRouter>
         <App />

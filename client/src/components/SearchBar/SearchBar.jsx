@@ -1,10 +1,10 @@
-import style from "./Searchbar.module.css"; 
+import style from "./Searchbar.module.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getProductByName } from "../../redux/Actions/Products/productsActions";
 // import { searchUsers, setSearchType } from '../../redux/Actions/Users/usersActions';
 
-function Searchbar() {
+function Searchbar({ onClick }) {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
 
@@ -15,8 +15,7 @@ function Searchbar() {
 
   const handleSearch = (event) => {
     event.preventDefault();
-    dispatch(getProductByName(name));
-    setName("");
+    onClick(name);
   };
 
   return (
@@ -51,29 +50,3 @@ function Searchbar() {
 }
 
 export default Searchbar;
-
-
-// function Searchbar(component) {
-//  const dispatch = useDispatch();
-//   const searchType = useSelector((state) => state.searchType);
-//   const [info, setInfo] = useState("");
-//   dispatch(setSearchType(component));
-
-//   const HandleChange = (event) => {
-//     setInfo(() => {
-//       const searched = event.target.value;
-//       console.log(searchType);
-//       if (searchType === "products") {
-//         dispatch(searchProducts(searched));
-//         return searched;
-//       } else if (searchType === "users") {
-//         dispatch(searchUsers(searched));
-//         return searched;
-//       }
-//     });
-//   };
-//   return (
-//     <div>
-//       <input type="search" value={info} onChange={HandleChange} />
-//     </div>
-//   );

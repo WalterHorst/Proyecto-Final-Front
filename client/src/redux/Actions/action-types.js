@@ -14,3 +14,4 @@ export const SET_SEARCH_TYPE = "SET_SEARCH_TYPE";
 export const ORDERED = "ORDERED";
 export const GET_USER_BY_ID = 'GET_USER_BY_ID';
 export const USER_LOG_OUT = 'USER_LOG_OUT';
+export const SET_USER = "SET_USER"

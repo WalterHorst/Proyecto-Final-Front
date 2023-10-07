@@ -1,0 +1,18 @@
+.sidebar {
+    background-color: rgb(38, 0, 255) !important;
+}
+
+#sidebar-container {
+    min-height: 100vh;
+}
+
+.logo{
+    padding: .875rem 1.25rem;
+}
+.menu{
+    width: 18rem;
+}
+
+a:hover {
+    text-decoration: none !important;
+}

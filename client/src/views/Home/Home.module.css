@@ -1,4 +1,4 @@
-section {
+.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,14 +14,32 @@ h1 {
 .imagen {
     display: inline-block;
 }
-.marcas-text {
+.marcas_text {
     font-size: 35px; 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
-  .custom-h5 {
+  .custom_h5 {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 30px; 
     color:rgb(94, 87, 202);
   }
   
+  .experiencia_titulo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .exp {
+    font-size: 2.5rem;
+    color: rgb(0, 204, 255);
+    background-color: #0a0a23;
+    padding: 8px 19px;
+    border-radius: 50%;
+  }
+  
+  .seccion_clara {
+    color: black;
+    background-color: white;
+    margin: 10px 0;
+  }

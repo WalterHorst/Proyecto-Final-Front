@@ -17,8 +17,8 @@ const LoginRegister = () => {
                 <div className={`col-md-6 ${style.backgroundLogin}`}></div>
                 <div className="col-md-6">
                     {showLogin
-                    ? (<Login showRegister={!showLogin} toggleComponent={toggleComponent} />) 
-                    : (<Register showLogin={showLogin} toggleComponent={toggleComponent} />)
+                    ? (<Login showRegister={!showLogin} toggleComponent={toggleComponent}/>) 
+                    : (<Register showLogin={showLogin} toggleComponent={toggleComponent}/>)
                     }
                 </div>
             </div>

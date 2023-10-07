@@ -35,18 +35,18 @@
   }
   
   .overlay {
-    transition: all 1s ease;
+    /* transition: all 1s ease; */
     opacity: 0;
     position: absolute;
-    top: 50%;
-    left: 40%;
+    top: 44% !important;
+    left: 44%  !important;
     transform: translate(-50%, -40%);
-    text-align: center;
+    text-align: center !important;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrar horizontalmente */
-    justify-content: center; /* Centrar verticalmente */
-    text-align: center; /* Centrar el texto */
+    align-items: center !important; /* Centrar horizontalmente */
+    justify-content: center !important; ; /* Centrar verticalmente */
+    text-align: center !important; /* Centrar el texto */
   }
 
   .overlay .iconos-contenedor {
@@ -104,16 +104,26 @@
     }
   }
 
-  @media screen and (max-width: 767px) {
-    .image {
-      max-width: 700px; 
-      height: 700px;
-      padding: 10px;
-      border-radius: 20px;
-      display: block;
-      justify-content: center; /* Centrar horizontalmente */
-      align-items: center; /* Centrar verticalmente */
-      transition: all 0.2s ease;
+  @media screen and (max-width: 768px) {
+    .smallImage {
+      max-width: 50%; /* Ajusta el ancho de las imágenes según tu preferencia */
+      height: auto; /* Mantén la proporción de la imagen */
+      margin: 0 auto; /* Centra horizontalmente la imagen */
+    }
+
+    .overlay {
+      /* transition: all 1s ease; */
+      opacity: 0;
+      position: absolute;
+      top: 45% !important;
+      left: 50%  !important;
+      transform: translate(-50%, -40%);
+      text-align: center !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center !important; /* Centrar horizontalmente */
+      justify-content: center !important; ; /* Centrar verticalmente */
+      text-align: center !important; /* Centrar el texto */
     }
     .containerAbout {
       background-image: url();

@@ -84,3 +84,33 @@ export const validateProduct = (data) => {
 
    return errors;
 };
+
+export const validateAccountDetail = (data) => {
+  let errors = {};
+
+  if (data.name === "" || data.name.length > 20 || data.name.length < 3) {
+    errors.name = "Recuerda que el nombre debe tener mínimo 3 y máximo 20 caracteres";
+  }
+
+  if (data.celular === "" || isNaN(Number(data.celular)) || data.celular.length < 11 || data.celular.length > 11) {
+    errors.celular = "Recuerda que tu número celular debe tener 11 dígitos";
+  }
+
+  if (!/^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(data.email)) {
+    errors.email = "Recuerda que el formato de email valido es ejemplo@correo.com";
+  }
+
+  // if (!/(?=.*[a-z])/.test(data.password)) {
+  //   errors.password = "Requiere una letra minúscula";
+  // } else if (!/(?=.*[A-Z])/.test(data.password)) {
+  //   errors.password = "Requiere una letra mayúscula";
+  // } else if (data.password.length < 6 || data.password.length > 10) {
+  //   errors.password = "Requiere entre 6 y 10 caracteres";
+  // } 
+
+  // if( data.password !== data.passwordConfirmation) {
+  //   errors.passwordConfirmation = 'Las contraseñas no coinciden'
+  // }
+
+   return errors;
+};

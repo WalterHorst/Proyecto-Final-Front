@@ -3,20 +3,24 @@
     background-color: #E5F2FB !important;
     height: 80px;
   }
-  .nav-item {
+  .nav_item {
     margin-left: 30px;
   }
   
-  .navbar-collapse {
+  .navbar_collapse {
     align-items: center;
     justify-content: space-between;
   }
-  .navbar-nav .nav-item .nav-link:first-child {
+  .nav_link {
+    color: black;
+    text-decoration: none;
+  }
+  .nav_link:first-child {
     flex: 0 0 auto; /* Evita que el primer div crezca o se contraiga */
     width: auto; /* Permite que el ancho del primer div se ajuste automáticamente */
     }
 
-  .nav-item .nav-link:hover {
+  .nav_link:hover {
     cursor: pointer;
     transition: background-color 0.3s ease;
     color: #6489D8;
@@ -27,32 +31,32 @@
     transition: transform 0.8s; /* Agrega una transición suave */
   }
 
-  .center-logo {
+  .center_logo {
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .custom-icon {
+  .custom_icon {
     color: white;
   }
 
 /* Buttons */
-  .d-flex .btn {
+  .navbar_collapse .btn {
     background-color: #6489D8;
     color: white;
     border: none;
     margin-left: 10px;
   }
   
-  .d-flex .btn:hover {
+  .navbar_collapse .btn:hover {
     transition: background-color 0.3s ease;
     background-color: white !important;
     color: black !important;
     border: 2px solid #6489D8;
   }
   
-  .custom-icon:hover {
+  .custom_icon:hover {
     color: black; 
   }
   .nav_logo:hover {
@@ -68,27 +72,27 @@
     align-items: center !important; /* Alinea los elementos al inicio del contenedor */
   }
 
-  .navbar-toggler {
+  .navbar_toggler {
     display: block !important; 
   }
 
-  .navbar-collapse {
+  .navbar_collapse {
     display:block; 
     text-align: center;
   }
 
-  .navbar-brand {
+  .navbar_brand {
     margin-right: 0 auto;
   }
 
-  .navbar-nav {
+  .navbar_nav {
     margin-top: 1rem; /* Espacio superior entre el logo y el menú */
     display: flex !important; /* Para centrar los botones horizontalmente */
     flex-direction: column !important; /* Alinea los botones en una columna */
     align-items: center !important; /* Alinea los botones al centro horizontalmente */
   }
 
-  .nav-item {
+  .nav_item {
     margin-bottom: 0.2rem; 
   }
 

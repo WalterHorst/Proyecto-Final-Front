@@ -6,7 +6,6 @@ import Filters from "../../components/Filters/Filters";
 import Pagination from "../../components/Pagination/Pagination";
 
 const ITEMS_PER_PAGE = 6;
-import Searchbar from "../../components/SearchBar/SearchBar";
 
 const Store = () => {
   const dispatch = useDispatch();
@@ -49,7 +48,6 @@ const Store = () => {
 
   return (
     <div>
-      <Searchbar />
       <Filters />
       <div>
         <Pagination
