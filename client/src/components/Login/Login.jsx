@@ -67,9 +67,7 @@ const Login = ({ toggleComponent }) => {
         sessionStorage.setItem("jwt_session", token);
         dispatch(createUserRole(rol));
         dispatch(setUser({id, email, name, rol, celular}));
-
         navigate("/");
-    
       })
       .catch(error => {
         console.log(error);
@@ -87,7 +85,7 @@ const Login = ({ toggleComponent }) => {
       // ESTA URL ES EL FAMOSO POPUP QUE APARECE SIEMPRE QUE HACEMOS LOGIN CON GOOGLE
       //
 
-      const {auth_url} = (await axios.post("https://pf-back-deploy.onrender.com/login-google-init")).data
+      const {auth_url} = (await axios.post("http://localhost:3001/login-google-init")).data
 
       //
       // USANDO LA URL PROVISTA ABRIMOS UNA VENTANA QUE PIDE ESCOGER LA CUENTA DE MAIL
@@ -159,7 +157,7 @@ const Login = ({ toggleComponent }) => {
             <button
               type="submit"
               disabled={disableByEmptyProps()}
-              className="btn btn-primary"
+              className='btn btn-primary w-100 my-1'
             >
               {" "}
               Iniciar sesión{" "}

@@ -90,7 +90,7 @@ const Home = () => {
           <div className="row">
             {/* atencion personalizada */}
             <div className="columna col-12 col-md-4">
-            <i className={`bi bi-box ${style.exp}`}></i>
+            <i className={`bi bi-people ${style.exp}`}></i>
               <p className={style.experiencia_titulo}>Atención personalizada</p>
               <p>Nuestro criterio, prestigio y respeto profesional son la base de nuestra dedicación a brindarte una atención personalizada excepcional. Cada interacción contigo es una oportunidad para demostrar nuestro compromiso con la excelencia en el servicio al cliente.</p>
               </div>
@@ -102,7 +102,7 @@ const Home = () => {
               </div>
             {/* los mejores precios siempre */}
             <div className="columna col-12 col-md-4">
-            <i className={`bi bi-box ${style.exp}`}></i>
+            <i className={`bi bi-cash-coin ${style.exp}`}></i>
             <p className={style.experiencia_titulo}>Los mejores precios siempre</p>
               <p>En nuestro compromiso de brindarte lo mejor, nos complace destacar por ofrecer precios inigualables en el mercado. Trabajamos incansablemente para asegurarnos de que obtengas el mayor valor por tu dinero, proporcionándote productos y servicios de alta calidad.</p>
               </div>

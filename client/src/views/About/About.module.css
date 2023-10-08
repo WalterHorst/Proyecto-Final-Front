@@ -121,9 +121,9 @@
       text-align: center !important;
       display: flex;
       flex-direction: column;
-      align-items: center !important; /* Centrar horizontalmente */
-      justify-content: center !important; ; /* Centrar verticalmente */
-      text-align: center !important; /* Centrar el texto */
+      align-items: center !important; 
+      justify-content: center !important; ; 
+      text-align: center !important; 
     }
     .containerAbout {
       background-image: url();

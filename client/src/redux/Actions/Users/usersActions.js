@@ -44,9 +44,9 @@ export const getUserById = (id) => {
         try{
             const { data } = await axios.get(`https://pf-back-deploy.onrender.com/users/${id}`)
             dispatch ({ type: GET_USER_BY_ID, payload: data })
-            console.log(data);
+            // console.log(data);
         }catch (error) {
-            alert(error.response.data)
+            console.log(error);
         }
     }
 }
@@ -61,7 +61,7 @@ export const setUser = (user) => {
 export const searchUsers = (searched) => {
     return { type: SEARCH_USERS, payload: searched }
 };
-  
+
 export const setSearchType = (searchType) => {
     return { type: SET_SEARCH_TYPE, payload: searchType }
 };

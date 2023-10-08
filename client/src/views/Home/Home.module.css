@@ -20,11 +20,22 @@ h1 {
   }
 
   .custom_h5 {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 30px; 
-    color:rgb(94, 87, 202);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    color: rgb(94, 87, 202);
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto; /* Agrega márgenes superior e inferior */
   }
-  
+
+  .carousel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .img-fluid {
+    margin-top: 20px;
+  }
   .experiencia_titulo {
     font-size: 25px;
     font-weight: bold;

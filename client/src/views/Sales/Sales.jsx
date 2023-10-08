@@ -1,46 +1,46 @@
-import ah from "../../assets/aboutProfileImages/ah.jpg";
+import { useEffect } from "react";
+import CardsShop from "../../components/CardsShop/CardsShop";
+import style from "./Sales.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserById } from "../../redux/Actions/Users/usersActions";
+import jwtDecode from "jwt-decode";
 
 const Sales = () => {
-    const compras = [
-        {
-            date: '05/10/2023',
-            compra: 'vslfnj23498ad',
-            total: 23.342,
-            name: 'Pelota',
-            unidades: 3,
-            imagen: ah
-        },
-        // {
-        //     date: '24/11/2024',
-        //     compra: 'lñajasfdasd234',
-        //     total: 10.424,
-        //     name: 'Comida',
-        //     unidades: 1,
-        //     imagen: ah
-        // }
-    ]
-    return(
-        <div>
-            <h1>Mis compras</h1>
-            <div className="card mb-3" >
-                <div className="row g-0">
-                    <div className="col-md-4">
-                    <img src={ah} alt="" className="img-fluid rounded-start"/>
-                    </div>
-                    <div className="col-md-8">
-                    <div className="card-body">
+  const token = sessionStorage.getItem("jwt_session");
+  const { id } = jwtDecode(token);
+  const [user] = useSelector((state) => state.userLogged);
+  const dispatch = useDispatch();
 
-                        <h5 className="card-title">{compras[0].name}</h5>
-                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p className="card-text"><small className="text-body-secondary">{compras[0].date}</small></p>
-                    </div>
-                    <button>Detalle</button>
-                    </div>
-                </div>
-            </div>
+  useEffect(() => {
+    dispatch(getUserById(id));
+  }, []);
 
-        </div>
-    )
-}
+  const compras = [
+    {
+      date: "05/10/2023",
+      id: "vslfnj23498ad",
+      total: 23.342,
+      name: "Pelota",
+      units: 3,
+      image: "image",
+    },
+    {
+      date: "24/11/2024",
+      id: "lñajasfdasd234",
+      total: 10.424,
+      name: "Comida",
+      units: 1,
+      image: "image",
+    },
+  ];
+
+  return (
+    <div>
+      <h1 className={style.title}>Mis compras</h1>
+      <CardsShop compras={compras} />
+      {/* <CardsShop compras={user.sales}/> */}
+    </div>
+  );
+};
 
 export default Sales;

@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { CartContext } from "../../contexts/ShoppingCartContext";
 import style from "./Cart.module.css";
 import axios from "axios";
@@ -7,9 +6,6 @@ import axios from "axios";
 const Cart = () => {
   const [cart, setCart] = useContext(CartContext);
   const [totalPrice, setTotalPrice] = useState(0);
-
-  const User = useSelector((state) => state.userLogged[0]);
-  console.log(User);
 
   useEffect(() => {
     // Calcular el precio total de todos los productos en el carrito
@@ -23,13 +19,8 @@ const Cart = () => {
   const incrementAmount = (productId) => {
     const updatedCart = [...cart];
     updatedCart.forEach((product) => {
-      if (product.id === productId && product.quantity < product.stock) {
+      if (product.id === productId) {
         product.quantity += 1;
-      } else if (
-        product.id === productId &&
-        product.quantity === product.stock
-      ) {
-        window.alert("No hay suficiente stock");
       }
     });
     setCart(updatedCart);
@@ -58,7 +49,7 @@ const Cart = () => {
     const initPoint = await data.body.init_point;
     await cart.map(async (item) => {
       let itemSale = {
-        iduser: User.id,
+        iduser: 4,
         idproduct: item.id,
         quantity: item.quantity,
       };

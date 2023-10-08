@@ -2,10 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import style from "./Navbar.module.css";
 import { useEffect, useState, useContext } from "react";
 import { useDispatch } from "react-redux";
-import {
-  createUserRole,
-  userLogOut,
-} from "../../redux/Actions/Users/usersActions";
+import { createUserRole, userLogOut } from "../../redux/Actions/Users/usersActions";
 import imagelogo from "../../assets/logo/Logo.png";
 import { CartContext } from "../../contexts/ShoppingCartContext";
 
@@ -22,31 +19,32 @@ const NavBar = ({ toggleComponent, userId, userImage }) => {
   }, 0);
 
   useEffect(() => {
-    const token = sessionStorage.getItem("jwt_session");
-    if (token) {
-      loginState(false);
+  const token = sessionStorage.getItem("jwt_session");
+    if(token)
+    {
+      loginState(false)
     }
-  }, [location]);
-
+  }, [location])
+  
   const handleLogout = () => {
     sessionStorage.removeItem("jwt_session");
     dispatch(createUserRole(""));
-    dispatch(userLogOut());
+    dispatch(userLogOut())
     // navigate("/loginRegister");
     loginState(true);
-  };
-
+  }
+  
   const handleCart = () => {
-    const token = sessionStorage.getItem("jwt_session");
-    console.log(token);
+    const token = sessionStorage.getItem("jwt_session")
     // token ? navigate("/cart") : navigate("/loginRegister")
-    if (token) {
-      navigate("/cart");
-      return;
+    if(token) {
+      navigate("/cart")
     }
-    alert("Debe ingresar o registrarse");
-    navigate("/loginRegister");
-  };
+    else {
+      alert('Debe ingresar o registrarse')
+      navigate("/loginRegister")
+    }
+  }
 
   return (
     <div>
@@ -73,10 +71,7 @@ const NavBar = ({ toggleComponent, userId, userImage }) => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div
-            className={`${style.navbar_collapse} collapse navbar-collapse justify-content-between`}
-            id="navbarNav"
-          >
+          <div className={`${style.navbar_collapse} collapse navbar-collapse justify-content-between`} id="navbarNav">
             <ul className={`navbar-nav ${style.navbar_nav}`}>
               <li className={style.nav_item}>
                 <a className={style.nav_link} onClick={() => navigate("/")}>
@@ -84,53 +79,43 @@ const NavBar = ({ toggleComponent, userId, userImage }) => {
                 </a>
               </li>
               <li className={style.nav_item}>
-                <a
-                  className={style.nav_link}
-                  onClick={() => navigate("/store")}
-                >
+                <a className={style.nav_link} onClick={() => navigate("/store")}>
                   Tienda
                 </a>
               </li>
               <li className={style.nav_item}>
-                <a
-                  className={style.nav_link}
-                  onClick={() => navigate("/about")}
-                >
+                <a className={style.nav_link} onClick={() => navigate("/about")}>
                   Sobre nosotros
                 </a>
               </li>
             </ul>
             <div className={`d-flex ${login ? "" : "always-visible"}`}>
-              {login ? (
+              {login
+              ? (
                 <>
                   <button
                     className={`btn btn-sm ${style.btn}`}
-                    onClick={() => navigate("/loginRegister")}
+                    onClick={() => navigate('/loginRegister')}
                   >
                     Ingresar
                   </button>
                   <button
                     className={`btn btn-sm ${style.btn}`}
-                    onClick={() => navigate("/loginRegister")}
+                    onClick={() => navigate('/loginRegister')}
                   >
                     Registrarse
                   </button>
                 </>
               ) : (
                 <>
-                  <button
-                    className={`btn cart always-visible ${style.btn}`}
-                    type="submit"
-                  >
+                  <button className={`btn cart always-visible ${style.btn}`} type="submit">
                     {login ? (
                       <Link to={`/accountDetail/${userId}`}>
-                        (<img src={userImage} />)
+                        (<img src={userImage}/>)
                       </Link>
                     ) : (
                       <Link to={`/accountDetail/${userId}`}>
-                        <i
-                          className={`bi bi-person-circle ${style.custom_icon}`}
-                        ></i>
+                        <i className={`bi bi-person-circle ${style.custom_icon}`}></i>
                       </Link>
                     )}
                   </button>
@@ -144,11 +129,7 @@ const NavBar = ({ toggleComponent, userId, userImage }) => {
                   </button>
                 </>
               )}
-              <button
-                onClick={handleCart}
-                className={`btn cart ${style.btn}`}
-                type="submit"
-              >
+              <button onClick={handleCart} className={`btn cart ${style.btn}`} type="submit">
                 <i className="bi bi-cart"></i>
                 {token && <span>{quantity}</span>}
               </button>
@@ -160,4 +141,6 @@ const NavBar = ({ toggleComponent, userId, userImage }) => {
   );
 };
 
+
 export default NavBar;
+

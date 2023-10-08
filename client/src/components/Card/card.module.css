@@ -1,4 +1,12 @@
+.customCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .customCard {
+  width: 100%;
+  margin-bottom: 20px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 24px;
   box-shadow: 0px 4px 8px rgba(0.5, 0.5, 0.5, 0.5) !important; 
@@ -12,19 +20,21 @@
 }
 
 .customCardTitle {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
   font-size: 25px;
+  text-align: center; /* Alinea el título al centro */
 }
 
 .customCardText {
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 24px;
   color: black;
+  text-align: center; /* Alinea el texto al centro */
 }
 
 .cardImage {
   width: 100%;
-  height: 190% !important; 
+  height: 210% !important; 
   object-fit: cover;
 }
 
@@ -35,10 +45,10 @@
 .cardButton {
   background-color: #6489D8 !important;
   font-family: 'Times New Roman', Times, serif !important;
+  color: #fff !important;
   width: 50%;
   border-radius: 1rem;
   border: none;
-  color: #fff;
   font-size: 1rem;
   padding: .5rem 1rem;
   cursor: pointer;
@@ -46,4 +56,29 @@
 
 .heart {
   text-align: center;
+}
+
+/* Media query para filas de 2 tarjetas en pantallas de 850px o menos */
+@media (max-width: 768px) {
+  .customCardContainer {
+    justify-content: space-between;
+  }
+  .customCard {
+    width: calc(50% - 10px);
+  }
+}
+
+/* Media query para filas de 1 tarjeta en pantallas de 576px o menos */
+@media (max-width: 576px) {
+  .customCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .customCard {
+    width: 100%;
+    margin: 0 auto; /* Centra horizontalmente las tarjetas */
+  }
 }

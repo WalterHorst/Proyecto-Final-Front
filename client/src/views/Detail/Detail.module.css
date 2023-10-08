@@ -1,4 +1,4 @@
-.cardDetail {
+.detailC {
     font-family: 'Times New Roman', Times, serif;
     border: none;
     background-color: #f7f7f7;
@@ -9,30 +9,30 @@
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
-  }
+}
 
-.product-name {
+.nameD {
   font-size: 36px;
   font-weight: bold;
   color: #2315a1;
 }
 
-.product-brand {
+.brand {
   font-size: 24px;
   color: #666;
 }
 
-.product-category {
+.category {
   font-size: 20px;
   color: #888;
 }
 
-.product-description {
+.description {
   font-size: 18px;
   color: #777;
 }
 
-.product-price {
+.price {
   font-size: 28px;
   color: #2315a1;
 }
@@ -42,8 +42,13 @@
   color: white !important;
   margin: 10px !important;
 }
+.btnDelete {
+  background-color: #6489D8 !important;
+  color: rgb(235, 85, 85) !important;
+  margin: 10px !important;
+}
 
-.ml-2 {
+.input {
  font-family: 'Times New Roman', Times, serif;
  width: 50px;
  border-radius: 0.8px;
