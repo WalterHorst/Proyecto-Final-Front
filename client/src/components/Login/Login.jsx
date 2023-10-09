@@ -2,13 +2,16 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { validateLogin } from "../../Validate";
-import { createUserRole, getUserById, setUser } from "../../redux/Actions/Users/usersActions";
+import {
+  createUserRole,
+  getUserById,
+  setUser,
+} from "../../redux/Actions/Users/usersActions";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import jwtDecode from 'jwt-decode'
-import style from './Login.module.css';
+import jwtDecode from "jwt-decode";
+import style from "./Login.module.css";
 import imgGoogle from "../../assets/iconos/google.png";
-
 
 // EXTRA: Recuperación de contraseña
 
@@ -49,7 +52,6 @@ const Login = ({ toggleComponent }) => {
     return disabledAux;
   };
 
-
   //
   // EN HANDLE SUBMIT EN VEZ DE HACER UN DISPATCH CON EL ID DE USUARIO
   // USO LA ACCION setUser QUE CREE PARA USAR TODOS LOS DATOS QUE ME DEVUELVE EL BACK
@@ -59,48 +61,45 @@ const Login = ({ toggleComponent }) => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
 
-    axios.post("https://pf-back-deploy.onrender.com/login", data)
-      .then(usrRes => {
-
-        const {id, email, name, rol, celular, token} = usrRes.data;
+    axios
+      .post("https://pf-back-deploy.onrender.com/login", data)
+      .then((usrRes) => {
+        const { id, email, name, rol, celular, token } = usrRes.data;
         // Setteamos el token
         sessionStorage.setItem("jwt_session", token);
         dispatch(createUserRole(rol));
-        dispatch(setUser({id, email, name, rol, celular}));
+        dispatch(setUser({ id, email, name, rol, celular }));
         navigate("/");
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
-        alert(error.response.data.error)
-      })
+        alert(error.response.data.error);
+      });
   };
 
-
   const login = async () => {
-    try
-    {
-      // 
+    try {
+      //
       // PEDIMOS AL BACK UNA URL DE GOOGLE
       //
       // ESTA URL ES EL FAMOSO POPUP QUE APARECE SIEMPRE QUE HACEMOS LOGIN CON GOOGLE
       //
 
-      const {auth_url} = (await axios.post("http://localhost:3001/login-google-init")).data
+      const { auth_url } = (
+        await axios.post(
+          "https://pf-back-deploy.onrender.com/login-google-init"
+        )
+      ).data;
 
       //
       // USANDO LA URL PROVISTA ABRIMOS UNA VENTANA QUE PIDE ESCOGER LA CUENTA DE MAIL
       // CON LA QUE VAMOS A HACER LOGIN
       //
       window.open(auth_url, "_self");
-    }
-    catch(error)
-    {
+    } catch (error) {
       alert("Fallo al iniciar la autenticación con Google");
     }
-  
-  }
-
-  
+  };
 
   return (
     <div className="container">
@@ -157,7 +156,7 @@ const Login = ({ toggleComponent }) => {
             <button
               type="submit"
               disabled={disableByEmptyProps()}
-              className='btn btn-primary w-100 my-1'
+              className="btn btn-primary w-100 my-1"
             >
               {" "}
               Iniciar sesión{" "}
@@ -171,7 +170,8 @@ const Login = ({ toggleComponent }) => {
               <a
                 href="#"
                 onClick={() => login()}
-                className="btn-outline-primary w-100 my-1 btn-lg align-items-center text-center"  style={{ marginBottom: "20px" }}
+                className="btn-outline-primary w-100 my-1 btn-lg align-items-center text-center"
+                style={{ marginBottom: "20px" }}
               >
                 <div className="row align-items-center">
                   <div className="col-10">
@@ -184,20 +184,21 @@ const Login = ({ toggleComponent }) => {
                     />{" "}
                     Iniciar sesión con Google{" "}
                   </div>
-                 
                 </div>
-                
               </a>
             </div>
             <div className="row">
-              <p>¿Aún no tienes una cuenta?<a
-                onClick={toggleComponent}
-                className="btn-outline-primary custom-button-height w-100 my-1 btn-lg"
-                style={{ cursor: "pointer" }}
-              >
-                {" "}
-                Regístrate aquí{" "}
-              </a></p>
+              <p>
+                ¿Aún no tienes una cuenta?
+                <a
+                  onClick={toggleComponent}
+                  className="btn-outline-primary custom-button-height w-100 my-1 btn-lg"
+                  style={{ cursor: "pointer" }}
+                >
+                  {" "}
+                  Regístrate aquí{" "}
+                </a>
+              </p>
             </div>
           </div>
         </div>

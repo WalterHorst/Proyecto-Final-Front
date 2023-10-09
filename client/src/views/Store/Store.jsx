@@ -49,7 +49,6 @@ const Store = () => {
 
   return (
     <div>
-      <Searchbar />
       <Filters />
       <div>
         <Pagination

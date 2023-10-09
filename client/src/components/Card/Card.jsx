@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import style from "./Card.module.css";
+import style from "./card.module.css";
 import { useContext } from "react";
 import { CartContext } from "../../contexts/ShoppingCartContext";
 
@@ -14,7 +14,6 @@ const Card = ({
   active,
   stock,
 }) => {
-  
   const [cart, setCart] = useContext(CartContext);
 
   const addToCart = (product) => {
@@ -83,7 +82,9 @@ const Card = ({
   };
 
   return (
-    <div className={`col-lg-4 col-md-6 col-12 justify-content-center ${style.customCardContainer}`}>
+    <div
+      className={`col-lg-4 col-md-6 col-12 justify-content-center ${style.customCardContainer}`}
+    >
       <div className={`card ${style.customCard}`}>
         <i className={`bi bi-balloon-heart ${style.heart}`}></i>
         <img
@@ -106,11 +107,11 @@ const Card = ({
             </Link>
           </div>
           <button className={style["btn"]} onClick={addToCart}>
-          Agregar al Carrito
-        </button>
-        <button onClick={() => removeItem(id)} className={style["btn"]}>
-          Remover del Carrito
-        </button>
+            Agregar al Carrito
+          </button>
+          <button onClick={() => removeItem(id)} className={style["btn"]}>
+            Remover del Carrito
+          </button>
         </div>
       </div>
     </div>

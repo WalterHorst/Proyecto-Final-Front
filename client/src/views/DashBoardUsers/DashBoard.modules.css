@@ -1,0 +1,42 @@
+.dashBoard {
+  display: flexbox;
+  justify-content: center;
+}
+
+.containerPrimary {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border:  solid blue;
+  padding: 40px, 40px,10,px, 40px;
+  background-color: white;
+}
+
+.containerSecondary {
+  text-align: center;
+}
+
+.buttonInsert {
+  background-color: rgb(47, 85, 255);
+  border-color: rgb(47, 85, 255);
+}
+
+.buttonInsert:hover {
+  background-color: #14B76E;
+  border-color: #14B76E;
+}
+
+.icon{
+  padding: 3px;
+  font-size: 15px;
+}
+
+.buttonTrash{
+  color: red;
+}
+
+.buttonTrash:hover{
+  color: rgb(162, 7, 7) !important;
+  border: rgb(162, 7, 7) !important;
+}
